@@ -1,0 +1,15 @@
+#
+# Config file for sSMTP sendmail
+#
+# The person who gets all mail for userids < 1000
+# Make this empty to disable rewriting.
+root={{ ssmtp_recipients }}
+RewriteDomain={{ ssmtp_rewrite_domain }}
+
+mailhub={{ ssmtp_mailhub }}
+
+FromLineOverride=NO
+
+UseSTARTTLS=yes
+AuthUser={{ ssmtp_auth.username }}
+AuthPass={{ ssmtp_auth.password }}

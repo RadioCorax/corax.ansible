@@ -1,0 +1,10 @@
+---
+utils:
+  - ca-certificates
+  - dnsutils
+  - less
+  - man
+  - net-tools
+  - ngrep
+  - tmux
+  - vim

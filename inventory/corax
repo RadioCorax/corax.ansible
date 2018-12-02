@@ -1,0 +1,22 @@
+[corax]
+afrika.unterberg.radiocorax.de ansible_host=192.168.11.99
+asia.unterberg.radiocorax.de ansible_host=192.168.22.101
+australia.unterberg.radiocorax.de ansible_host=192.168.33.100
+
+app-99.unterberg.radiocorax.de ansible_host=192.168.11.95
+db-00.unterberg.radiocorax.de ansible_host=192.168.11.121
+dns-00.unterberg.radiocorax.de ansible_host=192.168.11.131
+
+[server]
+afrika.unterberg.radiocorax.de
+asia.unterberg.radiocorax.de
+australia.unterberg.radiocorax.de
+
+app-99.unterberg.radiocorax.de
+db-00.unterberg.radiocorax.de
+dns-00.unterberg.radiocorax.de
+
+[hardware_server]
+afrika.unterberg.radiocorax.de
+asia.unterberg.radiocorax.de
+australia.unterberg.radiocorax.de

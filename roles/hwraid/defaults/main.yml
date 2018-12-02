@@ -1,0 +1,4 @@
+---
+hwraid_packages:
+  - arcconf
+  - tw-cli

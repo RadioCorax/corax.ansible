@@ -1,0 +1,4 @@
+---
+- name: install utils
+  apt:
+    name: "{{ utils }}"

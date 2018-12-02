@@ -1,0 +1,6 @@
+---
+- hosts: hardware_server
+  gather_facts: False
+  become: True
+  roles:
+    - role: smart

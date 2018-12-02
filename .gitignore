@@ -1,0 +1,9 @@
+# virtualenv
+bin/
+lib/
+lib64
+include/
+pip-selfcheck.json
+
+# Ansible
+*.retry

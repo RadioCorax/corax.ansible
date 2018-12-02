@@ -1,0 +1,6 @@
+---
+- hosts: server
+  gather_facts: False
+  become: True
+  roles:
+    - role: admin

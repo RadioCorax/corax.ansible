@@ -1,0 +1,7 @@
+---
+admin_users: "{{ vault_admin_users }}"
+
+ssmtp_recipients: admins@radiocorax.de
+ssmtp_mailhub: smtp.radiocorax.de
+ssmtp_rewrite_domain: radiocorax.de
+ssmtp_auth: "{{ vault_ssmtp_auth }}"

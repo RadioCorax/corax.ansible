@@ -1,0 +1,29 @@
+---
+- name: install sudo
+  apt:
+    name: sudo
+
+- name: add admin users
+  user:
+    append: True
+    groups:
+      - sudo
+    name: "{{ item.key }}"
+    password: "{{ item.value.password }}"
+    shell: /bin/bash
+  loop: "{{ admin_users|dict2items }}"
+  loop_control:
+    label: "{{ item.key }}"
+
+- name: add ssh authorized keys
+  authorized_key:
+    user: "{{ item.0.key }}"
+    key: "{{ item.1 }}"
+  loop: "{{ query('subelements', admin_users|dict2items, 'value.authorized_keys', {'skip_missing': True}) }}"
+  loop_control:
+    label: "{{ {'user': item.0.key, 'key': item.1} }}"
+
+- name: disable root login
+  user:
+    name: root
+    password: "!"

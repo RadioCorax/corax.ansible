@@ -1,0 +1,14 @@
+---
+- name: add hwraid apt repo key
+  apt_key:
+    url: https://hwraid.le-vert.net/debian/hwraid.le-vert.net.gpg.key
+
+- name: add hwraid apt repo
+  apt_repository:
+    repo: deb http://hwraid.le-vert.net/debian stretch main
+    filename: hwraid
+
+- name: install hwraid packages
+  apt:
+    name: "{{ hwraid_packages }}"
+    update_cache: True

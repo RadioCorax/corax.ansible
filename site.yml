@@ -1,0 +1,7 @@
+---
+- import_playbook: bootstrap.yml
+- import_playbook: ssmtp.yml
+- import_playbook: admin.yml
+- import_playbook: utils.yml
+- import_playbook: hwraid.yml
+- import_playbook: smart.yml
