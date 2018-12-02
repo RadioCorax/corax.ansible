@@ -1,6 +1,6 @@
 [corax]
 afrika.unterberg.radiocorax.de ansible_host=192.168.11.99
-asia.unterberg.radiocorax.de ansible_host=192.168.22.101
+asia.unterberg.radiocorax.de ansible_host=192.168.22.99
 australia.unterberg.radiocorax.de ansible_host=192.168.33.100
 
 app-99.unterberg.radiocorax.de ansible_host=192.168.11.95
