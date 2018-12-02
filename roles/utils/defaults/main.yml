@@ -1,5 +1,6 @@
 ---
 utils:
+  - bash-completion
   - ca-certificates
   - dnsutils
   - less
