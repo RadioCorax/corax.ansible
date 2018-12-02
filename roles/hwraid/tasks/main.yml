@@ -11,4 +11,3 @@
 - name: install hwraid packages
   apt:
     name: "{{ hwraid_packages }}"
-    update_cache: True
