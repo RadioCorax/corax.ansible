@@ -5,3 +5,4 @@
 - import_playbook: utils.yml
 - import_playbook: hwraid.yml
 - import_playbook: smart.yml
+- import_playbook: unattended_upgrades.yml

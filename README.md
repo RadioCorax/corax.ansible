@@ -11,6 +11,7 @@ Install
 * change working directory: `cd corax.ansible`
 * setup virtualenv: `virtualenv --python=python3 .`
 * bootstrap Ansible environment: `./bin/pip install -r requirements.txt`
+* install Ansible Galaxy role: `./bin/ansible-galaxy install -r ansible-galaxy.yml`
 
 Run
 ===
