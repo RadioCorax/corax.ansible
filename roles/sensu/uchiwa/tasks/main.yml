@@ -1,0 +1,19 @@
+---
+- name: install Uchiwa
+  apt:
+    name: uchiwa
+
+- name: configure Uchiwa
+  copy:
+    dest: /etc/sensu/uchiwa.json
+    content: "{{ sensu_uchiwa_config|to_nice_json }}"
+    group: uchiwa
+    mode: 0640
+  notify:
+    - restart Uchiwa
+
+- name: enable Uchiwa
+  service:
+    name: uchiwa
+    state: started
+    enabled: True

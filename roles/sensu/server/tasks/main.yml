@@ -1,0 +1,26 @@
+---
+- name: add RabbitMQ vhost
+  rabbitmq_vhost:
+    name: "{{ sensu_rabbitmq_vhost.name }}"
+
+- name: add RabbitMQ user
+  rabbitmq_user:
+    user: "{{ sensu_rabbitmq_vhost.username }}"
+    password: "{{ sensu_rabbitmq_vhost.password }}"
+    permissions:
+      - vhost: "{{ sensu_rabbitmq_vhost.name }}"
+        configure_priv: .*
+        read_priv: .*
+        write_priv: .*
+
+- name: enable Sensu server
+  service:
+    name: sensu-server
+    state: started
+    enabled: True
+
+- name: enable Sensu API
+  service:
+    name: sensu-api
+    state: started
+    enabled: True

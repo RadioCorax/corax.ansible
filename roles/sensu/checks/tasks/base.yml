@@ -1,0 +1,46 @@
+---
+- name: check disk usage
+  sensu_check:
+    name: check_disk_usage
+    command: check-disk-usage.rb
+    subscribers: base
+    interval: 300
+  notify:
+    - restart Sensu
+
+- name: check load
+  sensu_check:
+    name: check_load
+    command: check-load.rb
+    subscribers: base
+    interval: 120
+  notify:
+    - restart Sensu
+
+- name: check memory
+  sensu_check:
+    name: check_memory
+    command: check-memory-percent.rb -w 75 -c 90
+    subscribers: base
+    interval: 120
+  notify:
+    - restart Sensu
+
+- name: check swap
+  sensu_check:
+    name: check_swap
+    command: check-swap-percent.rb --warning 74 --critical 90
+    subscribers: base
+    interval: 120
+  notify:
+    - restart Sensu
+
+- name: check apt
+  sensu_check:
+    name: check_apt
+    command: /usr/lib/nagios/plugins/negate --warning='OK' -t 120 /usr/lib/nagios/plugins/check_apt -t 120
+    subscribers: base
+    interval: 3600
+  notify:
+    - restart Sensu
+

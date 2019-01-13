@@ -1,0 +1,11 @@
+---
+#- hosts: monitor
+#  roles:
+#    - role: sensu/server
+#    - role: sensu/client
+#    - role: sensu/uchiwa
+
+- hosts: all,!monitor
+  roles:
+    - role: sensu/client
+      sensu_rabbitmq_server: "{{ groups['monitor']|first }}"

@@ -1,0 +1,28 @@
+---
+- name: install Sensu plugins
+  gem:
+    name: "{{ item.key }}"
+    version: "{{ item.value.version }}"
+    executable: /opt/sensu/embedded/bin/gem
+    user_install: False
+  loop: "{{ sensu_plugins|dict2items }}"
+
+- name: install Nagios plugins
+  apt:
+    name: monitoring-plugins-basic
+
+- name: configure Sensu client
+  sensu_client:
+    name: "{{ ansible_fqdn }}"
+    address: "{{ ansible_default_ipv4.address }}"
+    safe_mode: True
+    subscriptions:
+      - base
+  notify:
+    - restart Sensu client
+
+- name: enable Sensu client
+  service:
+    name: sensu-client
+    state: started
+    enabled: True

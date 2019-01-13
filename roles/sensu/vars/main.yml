@@ -1,0 +1,13 @@
+---
+sensu_config:
+  rabbitmq:
+    host: "{{ sensu_rabbitmq_server }}"
+    vhost: "{{ sensu_rabbitmq_vhost.name }}"
+    user: "{{ sensu_rabbitmq_vhost.username }}"
+    password: "{{ sensu_rabbitmq_vhost.password }}"
+  redis:
+    host: 127.0.0.1
+  api:
+    bind: "::1"
+    user: "{{ sensu_api.username }}"
+    password: "{{ sensu_api.password }}"

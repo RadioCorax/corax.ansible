@@ -1,0 +1,22 @@
+---
+- name: add Sensu repo key
+  apt_key:
+    url: https://sensu.global.ssl.fastly.net/apt/pubkey.gpg
+
+- name: add Sensu repo
+  apt_repository:
+    repo: deb https://sensu.global.ssl.fastly.net/apt {{ ansible_distribution_release }} main
+    filename: sensu
+
+- name: install Sensu
+  apt:
+    name: sensu
+
+- name: configure Sensu
+  copy:
+    dest: /etc/sensu/config.json
+    content: "{{ sensu_config|to_nice_json }}"
+    group: sensu
+    mode: 0640
+  notify:
+    - restart Sensu

@@ -1,6 +1,8 @@
 ---
 utils:
+  - apt-transport-https
   - bash-completion
+  - build-essential
   - ca-certificates
   - dnsutils
   - less

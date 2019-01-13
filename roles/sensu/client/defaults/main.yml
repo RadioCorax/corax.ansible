@@ -1,0 +1,19 @@
+---
+sensu_plugins:
+  sensu-plugins-disk-checks:
+    version: 4.0.0
+  sensu-plugins-cpu-checks:
+    version: 3.0.0
+  sensu-plugins-load-checks:
+    version: 4.0.2
+  sensu-plugins-memory-checks:
+    version: 3.2.0
+  sensu-plugins-process-checks:
+    version: 3.2.0
+  sensu-plugins-filesystem-checks:
+    version: 1.0.0
+  sensu-plugins-http:
+    version: 4.0.0
+  sensu-plugins-ssl:
+    version: 2.0.1
+

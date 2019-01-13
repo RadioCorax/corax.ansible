@@ -1,0 +1,9 @@
+---
+sensu_uchiwa_config:
+  sensu:
+    - name: RadioCorax
+      host: localhost
+      user: "{{ sensu_api.username }}"
+      pass: "{{ sensu_api.password }}"
+  uchiwa:
+    users: "{{ sensu_uchiwa_users }}"

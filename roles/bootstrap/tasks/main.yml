@@ -1,3 +1,7 @@
 ---
 - name: install python
   raw: apt-get update && apt-get install -y python-minimal
+
+- name: set hostname
+  hostname:
+    name: "{{ inventory_hostname }}"
