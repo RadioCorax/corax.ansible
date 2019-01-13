@@ -1,9 +1,9 @@
 ---
-#- hosts: monitor
-#  roles:
-#    - role: sensu/server
-#    - role: sensu/client
-#    - role: sensu/uchiwa
+- hosts: monitor
+  roles:
+    - role: sensu/server
+    - role: sensu/client
+    - role: sensu/uchiwa
 
 - hosts: all,!monitor
   roles:
