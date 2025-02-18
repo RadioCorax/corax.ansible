@@ -5,6 +5,7 @@ lib64
 include/
 share/
 pip-selfcheck.json
+pyvenv.cfg
 
 # Ansible
 *.retry
