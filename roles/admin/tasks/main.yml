@@ -9,7 +9,7 @@
     groups:
       - sudo
     name: "{{ item.key }}"
-    password: "{{ item.value.password }}"
+    password: "{{ item.value.password|default(omit) }}"
     shell: /bin/bash
   loop: "{{ admin_users|dict2items }}"
   loop_control:
