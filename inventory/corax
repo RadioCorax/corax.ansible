@@ -1,21 +1,19 @@
 [corax:children]
 server
 
-
 [server:children]
 hardware_server
 virtual_server
 
 [hardware_server]
 afrika.unterberg.radiocorax.de
-asia.unterberg.radiocorax.de
 australia.unterberg.radiocorax.de
 
 [virtual_server]
-app-99.unterberg.radiocorax.de ansible_host=192.168.11.95
 db-00.unterberg.radiocorax.de
 dns-00.unterberg.radiocorax.de
 monitor-00.unterberg.radiocorax.de
+chat-00.unterberg.radiocorax.de
 
 [monitor]
 monitor-00.unterberg.radiocorax.de
