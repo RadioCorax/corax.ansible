@@ -13,11 +13,7 @@ australia.unterberg.radiocorax.de
 [virtual_server]
 db-00.unterberg.radiocorax.de
 dns-00.unterberg.radiocorax.de
-monitor-00.unterberg.radiocorax.de
 chat-00.unterberg.radiocorax.de
-
-[monitor]
-monitor-00.unterberg.radiocorax.de
 
 [legacy]
 accra.corax.lan
