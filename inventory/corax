@@ -4,6 +4,7 @@ server
 [server:children]
 hardware_server
 virtual_server
+legacy
 
 [hardware_server]
 afrika.unterberg.radiocorax.de
@@ -17,3 +18,19 @@ chat-00.unterberg.radiocorax.de
 
 [monitor]
 monitor-00.unterberg.radiocorax.de
+
+[legacy]
+accra.corax.lan
+afrika.corax.lan
+asmara.corax.lan
+brazzaville.corax.lan
+juba.corax.lan
+khartum.corax.lan
+luanda.corax.lan
+lusaka.corax.lan
+maseru.corax.lan
+melilla.corax.lan
+mombasa.corax.lan
+moroni.corax.lan
+tripolis.corax.lan
+victoria.corax.lan
