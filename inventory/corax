@@ -11,9 +11,10 @@ afrika.unterberg.radiocorax.de
 australia.unterberg.radiocorax.de
 
 [virtual_server]
+board-00.unterberg.radiocorax.de
+chat-00.unterberg.radiocorax.de
 db-00.unterberg.radiocorax.de
 dns-00.unterberg.radiocorax.de
-chat-00.unterberg.radiocorax.de
 proxy-00.unterberg.radiocorax.de
 
 [legacy]
