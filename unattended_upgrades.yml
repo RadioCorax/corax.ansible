@@ -1,5 +1,5 @@
 ---
 - hosts: virtual_server
   roles:
-    - role: debops.unattended_upgrades
+    - role: debops.debops.unattended_upgrades
 
