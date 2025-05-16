@@ -1,5 +1,6 @@
 ---
 admin_users: "{{ vault_admin_users }}"
+zabbix_server: 192.168.11.230
 
 ssmtp_recipients: admins@radiocorax.de
 ssmtp_mailhub: smtp.radiocorax.de

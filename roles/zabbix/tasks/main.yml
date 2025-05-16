@@ -1,0 +1,16 @@
+---
+- name: install zabbix-agent2
+  apt:
+    name: zabbix-agent2
+    state: present
+- name: copy zabbix apt.conf
+  copy:
+    src: files/apt.conf
+    dest: /etc/zabbix/zabbix_agent2.d/
+    mode: '644'
+- name: copy zabbix_agent2.conf
+  template:
+    src: templates/zabbix_agent2.conf.j2
+    dest: /etc/zabbix/zabbix_agent2.conf
+    mode: '644'
+  notify: restart zabbix-agent2
