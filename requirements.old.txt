@@ -1,4 +1,4 @@
-ansible==2.6.20
+ansible==8.5.0
 bcrypt==4.2.1
 cffi==1.15.1
 cryptography==44.0.1
