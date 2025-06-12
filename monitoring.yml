@@ -1,6 +1,7 @@
 ---
-- hosts: virtual_server, hardware_server
+- hosts: all:!legacy
   gather_facts: False
   become: True
   roles:
     - role: zabbix
+      zabbix_server: "{{ groups.monitoring_server | first}}"

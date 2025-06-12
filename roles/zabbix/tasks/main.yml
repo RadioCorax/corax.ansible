@@ -7,10 +7,10 @@
   copy:
     src: files/apt.conf
     dest: /etc/zabbix/zabbix_agent2.d/
-    mode: '644'
+    mode: 0o644
 - name: copy zabbix_agent2.conf
   template:
     src: templates/zabbix_agent2.conf.j2
     dest: /etc/zabbix/zabbix_agent2.conf
-    mode: '644'
+    mode: 0o644
   notify: restart zabbix-agent2
