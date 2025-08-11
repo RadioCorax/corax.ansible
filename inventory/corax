@@ -14,15 +14,15 @@ australia.unterberg.radiocorax.de
 [virtual_server]
 board-00.unterberg.radiocorax.de
 chat-00.unterberg.radiocorax.de
+cx-unifi-controller.unterberg.radiocorax.de
 datengrab-00.unterberg.radiocorax.de
 db-00.unterberg.radiocorax.de
 dns-00.unterberg.radiocorax.de
 monitor-00.unterberg.radiocorax.de
+ntp-00.unterberg.radiocorax.de
 proxy-00.unterberg.radiocorax.de
 radioco-00.unterberg.radiocorax.de
 stream-00.unterberg.radiocorax.de
-monitor-00.unterberg.radiocorax.de
-cx-unifi-controller.unterberg.radiocorax.de
 
 [monitoring_server]
 monitor-00.unterberg.radiocorax.de
