@@ -1,11 +1,7 @@
 ---
-- hosts: monitor
+- hosts: all:!legacy
+  gather_facts: False
+  become: True
   roles:
-    - role: sensu/server
-    - role: sensu/client
-    - role: sensu/uchiwa
-
-- hosts: all,!monitor
-  roles:
-    - role: sensu/client
-      sensu_rabbitmq_server: "{{ groups['monitor']|first }}"
+    - role: zabbix
+      zabbix_server: "{{ groups.monitoring_server | first}}"
