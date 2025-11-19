@@ -1,0 +1,12 @@
+---
+- name: install chrony
+  apt:
+    name: chrony
+    update_cache: yes
+    state: present
+- name: copy chrony.conf
+  template:
+    src: templates/chrony.conf.j2
+    dest: /etc/chrony/chrony.conf
+    mode: 0o644
+  notify: restart chrony
