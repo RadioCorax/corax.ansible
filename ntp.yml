@@ -1,5 +1,5 @@
 ---
-- hosts: all:!legacy
+- hosts: all:!time_server:!legacy
   gather_facts: False
   become: True
   roles:
