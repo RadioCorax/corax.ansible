@@ -32,6 +32,12 @@ wiki-00.unterberg.radiocorax.de
 [time_server]
 ntp-00.unterberg.radiocorax.de
 
+[grafana_server]
+grafana-00.unterberg.radiocorax.de
+
+[matrix_server]
+chat-00.unterberg.radiocorax.de
+
 [monitoring_server]
 monitor-00.unterberg.radiocorax.de
 
