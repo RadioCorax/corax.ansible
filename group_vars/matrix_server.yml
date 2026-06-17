@@ -1,0 +1,3 @@
+---
+unattended_upgrades__origins:
+      - 'o=matrix.org,n=${distro_codename}'
